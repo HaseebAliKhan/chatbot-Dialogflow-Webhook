@@ -46,7 +46,7 @@ const event = req.body.event
         // console.log("responses: ", responses);
         // console.log("resp: ", responses[0].queryResult.fulfillmentText);    
         res.send({
-            text: responses[0].queryResult.fulfillmentText
+            text: responses[0].queryResult
         });
 
     } catch (e) {
@@ -55,12 +55,12 @@ const event = req.body.event
 })
 app.post("/api/df_event_query", async (req, res) => {
 
-    const projectId = "saylani-class-delete-this"
-    const sessionId = req.body.sessionId || "session123"
-    const query = req.body.text;
-    const languageCode = "en-US"
-    const event = req.body.event
-    
+const projectId = "saylani-class-delete-this"
+const sessionId = req.body.sessionId || "session123"
+const query = req.body.text;
+const languageCode = "en-US"
+const event = req.body.event
+
     console.log("query: ", event, req.body);
 
     // The path to identify the agent that owns the created intent.
@@ -86,7 +86,7 @@ app.post("/api/df_event_query", async (req, res) => {
         // console.log("responses: ", responses);
         // console.log("resp: ", responses[0].queryResult.fulfillmentText);    
         res.send({
-            text: responses[0].queryResult.fulfillmentText
+            text: responses[0].queryResult
         });
 
     } catch (e) {
