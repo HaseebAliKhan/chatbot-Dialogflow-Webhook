@@ -45,9 +45,9 @@ const event = req.body.event
         const responses = await sessionClient.detectIntent(request);
         // console.log("responses: ", responses);
         // console.log("resp: ", responses[0].queryResult.fulfillmentText);    
-        res.send({
-            text: responses[0].queryResult
-        });
+        res.send(
+             responses[0].queryResult
+        );
 
     } catch (e) {
         console.log("error while detecting intent: ", e)
@@ -85,9 +85,9 @@ const event = req.body.event
         const responses = await sessionClient.detectIntent(request);
         // console.log("responses: ", responses);
         // console.log("resp: ", responses[0].queryResult.fulfillmentText);    
-        res.send({
-            text: responses[0].queryResult
-        });
+        res.send(
+            responses[0].queryResult
+        );
 
     } catch (e) {
         console.log("error while detecting intent: ", e)
