@@ -6,7 +6,7 @@ import { WebhookClient, Card, Suggestion, Image, Payload } from 'dialogflow-fulf
 import mongoose from 'mongoose'
 mongoose.connect("mongodb+srv://haseeb:haseeb@cluster0.rdqa1.mongodb.net/chatbot?retryWrites=true&w=majority")
 gcHelper();
-const sessionClient = new dialogflow.SessionsClient();
+const sessionClient = new dialogflow.SessionsClient()
 
 const app = express();
 app.use(cors())
