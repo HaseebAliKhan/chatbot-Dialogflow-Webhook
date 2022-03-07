@@ -16,7 +16,7 @@ app.use(express.json())
 const PORT = process.env.PORT || 7001;
 
 app.post("/api/df_text_query", async (req, res) => {
-const projectId = "saylani-class-delete-this"
+const projectId = "pc-shopping-nrih"
 const sessionId = req.body.sessionId || "session123"
 const query = req.body.text;
 const languageCode = "en-US"
@@ -55,7 +55,7 @@ const event = req.body.event
 })
 app.post("/api/df_event_query", async (req, res) => {
 
-const projectId = "saylani-class-delete-this"
+const projectId = "pc-shopping-nrih"
 const sessionId = req.body.sessionId || "session123"
 const query = req.body.text;
 const languageCode = "en-US"
