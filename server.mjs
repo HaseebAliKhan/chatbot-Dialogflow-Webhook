@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 7001;
 app.post("/api/df_text_query", async (req, res) => {
 const projectId = "pc-shopping-nrih"
 const sessionId = req.body.sessionId || "session123"
-const query = req.body.text;
+const text = req.body.text;
 const languageCode = "en-US"
 const event = req.body.event
 
@@ -36,7 +36,7 @@ const event = req.body.event
         session: sessionPath,
         queryInput: {
             text: {
-                text: query,
+                text: text,
                 languageCode: languageCode,
             },
         },
