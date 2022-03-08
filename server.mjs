@@ -4,6 +4,18 @@ import dialogflow from '@google-cloud/dialogflow';
 import gcHelper from "google-credentials-helper"
 import { WebhookClient, Card, Suggestion, Image, Payload } from 'dialogflow-fulfillment';
 import mongoose from 'mongoose'
+import Cookies from 'universal-cookie'
+import {v4 as uuid} from 'uuid'
+
+
+const cookies = new Cookies()
+
+if(cookies.get('userID')=== undefined){
+
+    cookies.set('userID', uuid(), {path:'/'})
+}
+console.log(cookies.get('userID'))
+
 mongoose.connect("mongodb+srv://haseeb:haseeb@cluster0.rdqa1.mongodb.net/chatbot?retryWrites=true&w=majority")
 gcHelper();
 const sessionClient = new dialogflow.SessionsClient()

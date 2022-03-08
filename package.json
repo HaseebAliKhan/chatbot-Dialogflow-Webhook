@@ -17,6 +17,8 @@
     "express": "^4.17.3",
     "google-credentials-helper": "^0.0.10",
     "mongoose": "^6.2.4",
-    "start": "^5.1.0"
+    "start": "^5.1.0",
+    "universal-cookie": "^4.0.4",
+    "uuid": "^8.3.2"
   }
 }
