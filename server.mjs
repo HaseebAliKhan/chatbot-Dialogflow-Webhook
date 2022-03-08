@@ -23,7 +23,7 @@ const languageCode = "en-US"
 const event = req.body.event
 
 
-    console.log("query: ", query, req.body);
+    console.log("query: ", text, req.body);
 
     // The path to identify the agent that owns the created intent.
     const sessionPath = sessionClient.projectAgentSessionPath(
