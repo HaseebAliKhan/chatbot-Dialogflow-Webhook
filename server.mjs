@@ -170,7 +170,7 @@ const event = req.body.event
                         console.log("Order Placed ");
                     }else{
         
-                        Order.updateOne({userID:userID},{phoneNo:agent.parameters.phoneNo,email:agent.parameters.email,registrationDate: Date.now()},function(err){
+                        Order.updateOne({userID:userID},{person:agent.parameters.person.structValue.fields.name,phoneNo:agent.parameters.phoneNo,email:agent.parameters.email,registrationDate: Date.now()},function(err){
                             if (err){
                                 console.log(err);
                             }else{
